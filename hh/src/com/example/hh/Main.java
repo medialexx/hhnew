@@ -50,6 +50,10 @@ public class Main extends Activity {
 	Spinner spinner;//выпадающий список
 	Context context;//--
 	AlertDialog.Builder ad;
+	
+	
+	
+	
 	@SuppressLint("ResourceAsColor")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +69,7 @@ public class Main extends Activity {
 			@Override
 
 			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-			      if (actionId == EditorInfo.IME_ACTION_DONE ||   
-			              actionId == EditorInfo.IME_ACTION_NEXT) {
+			      if (actionId == EditorInfo.IME_ACTION_NEXT) {
 			         showDialog(DIALOG_DATE);
 			         return false;
 			      }

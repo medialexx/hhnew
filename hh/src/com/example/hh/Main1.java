@@ -3,12 +3,15 @@ package com.example.hh;
 import java.text.SimpleDateFormat;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,7 +19,7 @@ import android.widget.TextView;
 public class Main1 extends Activity {
 	TextView ouTfio,ouTdate,ouTsex,ouTposition,
 	ouTzp,ouTtelephone,ouTemail;
-	MyData newData;//инициализация объекта MyData
+	MyData newData;//объект MyData
 	Button btn;//кнопка отправить
 	EditText send;// для ввода текста
 	String butok;
@@ -69,6 +72,10 @@ public class Main1 extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				//закрытие клавиатуры
+				InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+				imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+				getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 				Intent intent=new Intent().putExtra("send",send.getText().toString());
 				setResult(RESULT_OK, intent);
 				finish();
