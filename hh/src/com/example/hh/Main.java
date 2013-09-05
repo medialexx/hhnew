@@ -17,9 +17,11 @@ import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -57,6 +59,20 @@ public class Main extends Activity {
         //инициализация
 		 spinner=(Spinner) findViewById(R.id.spinner1);
 		 edit1=(EditText) findViewById(R.id.editText1);
+		 edit1.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+
+			 @SuppressWarnings("deprecation")
+			@Override
+
+			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+			      if (actionId == EditorInfo.IME_ACTION_DONE ||   
+			              actionId == EditorInfo.IME_ACTION_NEXT) {
+			         showDialog(DIALOG_DATE);
+			         return false;
+			      }
+			      return false;
+			    }
+			});
 		 edit2=(EditText) findViewById(R.id.editText2);
 		 edit3=(EditText) findViewById(R.id.editText3);
 		 edit4=(EditText) findViewById(R.id.editText4);		
@@ -142,7 +158,6 @@ spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 //Dialog
 	protected Dialog onCreateDialog(int id)
 	{
-	
 	  switch(id)
 	    {
 	          case DIALOG_DATE:
@@ -190,6 +205,12 @@ private OnDateSetListener myCallBack=new OnDateSetListener() {
 		myYear=year;
 		myMonth=monthOfYear;
 		myDay=dayOfMonth;
+		if (spinner.getSelectedItemId()==0)
+		{
+			//вывод на передний план
+			spinner.performClick();	
+		}
+		
 }
 };//endDialog
 

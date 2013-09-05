@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_gravity="center"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    android:scrollbars="vertical|horizontal" >
+    android:scrollbars="vertical" >
 
     <TextView
         android:id="@+id/infio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/twoActfio"
         android:textColor="@color/Text"
         android:textSize="16sp" />
@@ -32,6 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/twoActdate"
         android:textColor="@color/Text"
         android:textSize="16sp" />
@@ -42,6 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textSize="16sp" />
 
     <TextView
@@ -49,6 +60,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/twoActsex"
         android:textColor="@color/Text"
         android:textSize="16sp" />
@@ -59,6 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textSize="16sp" />
 
     <TextView
@@ -66,6 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/twoActposition"
         android:textColor="@color/Text"
         android:textSize="16sp" />
@@ -76,6 +93,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textSize="16sp" />
 
     <TextView
@@ -83,6 +102,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/twoActzp"
         android:textColor="@color/Text"
         android:textSize="16sp" />
@@ -93,6 +114,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textSize="16sp" />
 
     <TextView
@@ -100,6 +123,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/twoActtelephone"
         android:textColor="@color/Text"
         android:textSize="16sp" />
@@ -111,6 +136,8 @@
         android:layout_gravity="center"
         android:autoLink="phone"
         android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textSize="16sp" />
 
     <TextView
@@ -118,6 +145,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:text="@string/twoActemail"
         android:textColor="@color/Text"
         android:textSize="16sp" />
@@ -129,18 +158,27 @@
         android:layout_gravity="center"
         android:autoLink="email"
         android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/twoactsend"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text|textMultiLine"
-        android:lines="5"
-        android:scrollbars="vertical"
-        android:singleLine="false"
-        android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/twoactsend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine|textAutoCorrect|text|textCapSentences"
+            android:lines="5"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideInset"
+            android:singleLine="false"
+            android:overScrollMode="always"
+            android:textSize="16sp" >
+
+        </EditText>
+
 
     <Button
         android:id="@+id/twoactbtn"
@@ -151,3 +189,4 @@
         android:textSize="16sp" />
 
 </LinearLayout>
+</ScrollView>
