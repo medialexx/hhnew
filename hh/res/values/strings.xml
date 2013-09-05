@@ -1,0 +1,39 @@
+<resources>
+
+    <string name="app_name">hh</string>
+    <string name="action_settings">Settings</string>
+    <string name="send">Отправить ответ</string>
+    <string name="email">электронная почта</string>
+    <string name="telephone">номер телефона</string>
+    <string name="zp">оклад</string>
+    <string name="position">вакансия</string>
+    <string name="sex">Выберите пол</string>
+    <string name="name">ФИО</string>
+    	<string name="inputfio">Введите ФИО :</string>
+    	<string name="inputdata">Дата рождения :</string>
+    	<string name="inputsex">Выберите пол :</string>
+   		<string name="inputposition">Вакансия :</string>
+    	<string name="inputzp">Желаемый оклад :</string>
+    	<string name="inputtelephone">Номер телефона :</string>
+    	<string name="inputemail">Электронная почта :</string>
+    	<string name="not_found">не выбрано</string>
+    	<string name="cancel">Отмена</string>
+    <string-array name="array_sex">
+        <item>не выбрано</item>
+        <item >мужской</item>
+        <item >женский</item>   
+    </string-array>
+    <color name="List">#CFCBD3</color>
+    <dimen name="twodp">2dp</dimen>
+    <color name="Text">#FF1919</color>
+    <string name="rsend">Отправить резюме</string>
+    <string name="twoactivity">Ответ работодателя :</string>
+    <string name="twoActfio">ФИО соискателя</string>
+    <string name="twoActdate">Дата рождения</string>
+    <string name="twoActsex">Пол</string>
+    <string name="twoActposition">Должность</string>
+    <string name="twoActzp">Зарплата</string>
+    <string name="twoActtelephone">Номер телефона</string>
+    <string name="twoActemail">Электронная почта</string>
+        
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp"
+    android:scrollbars="vertical" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="7dp"
+        android:text="@string/inputfio"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+        android:hint="@string/name"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        android:maxLength="50"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="7dp"
+        android:text="@string/inputdata"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@android:color/transparent"
+        android:paddingLeft="10dp"
+        android:text="@string/not_found"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/insex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="7dp"
+        android:text="@string/inputsex"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:prompt="@string/sex"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/inposition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="7dp"
+        android:text="@string/inputposition"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+        android:hint="@string/position"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        android:maxLength="50"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/inzp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="7dp"
+        android:text="@string/inputzp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+        android:hint="@string/zp"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:maxLength="15"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/intelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="7dp"
+        android:text="@string/inputtelephone"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+        android:hint="@string/telephone"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:maxLength="15"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/inemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="7dp"
+        android:text="@string/inputemail"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/email"
+        android:imeOptions="actionDone"
+        android:inputType="textWebEmailAddress"
+        android:maxLength="30"
+        android:textSize="16sp" />
+
+<Button
+    android:id="@+id/butsend"
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="16dp"
+    android:text="@string/rsend"
+    android:textSize="16sp" />
+
+</LinearLayout>
+</ScrollView>
