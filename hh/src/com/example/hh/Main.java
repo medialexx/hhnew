@@ -61,6 +61,7 @@ public class Main extends Activity {
 		setContentView(R.layout.main);
 
         //инициализация
+		 res=getResources();
 		 spinner=(Spinner) findViewById(R.id.spinner1);
 		 edit1=(EditText) findViewById(R.id.editText1);
 		 edit1.setOnEditorActionListener(new EditText.OnEditorActionListener() {
@@ -70,7 +71,8 @@ public class Main extends Activity {
 
 			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 			      if (actionId == EditorInfo.IME_ACTION_NEXT) {
-			         showDialog(DIALOG_DATE);
+			      if (data.getText()==res.getString(R.string.not_found))
+			         {showDialog(DIALOG_DATE);}
 			         return false;
 			      }
 			      return false;
@@ -82,7 +84,6 @@ public class Main extends Activity {
 		 edit5=(EditText) findViewById(R.id.editText5);	
 		dtp= new DatePickerDialog(this, myCallBack, myYear, myMonth, myDay);
 		//текст для отмены
-        res=getResources();
         Cancel=res.getString(R.string.cancel);
         prov_d=res.getString(R.string.not_found);
 //кнопа для даты
